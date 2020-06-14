@@ -393,6 +393,8 @@ class Application extends Container implements ApplicationContract, HttpKernelIn
      */
     public function storagePath()
     {
+        $this->useStoragePath( $this->basePath.DIRECTORY_SEPARATOR.'storage2' );
+
         return $this->storagePath ?: $this->basePath.DIRECTORY_SEPARATOR.'storage';
     }
 
